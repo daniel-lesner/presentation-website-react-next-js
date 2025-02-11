@@ -3,18 +3,20 @@
 @tailwind utilities;
 
 @layer base {
-    :root {
-        --radius: 0.5rem;
-        --primary-color: #0EFF8F;
-        --secondary-color: #F58585;
-    }
+  :root {
+    --radius: 0.5rem;
+    --primary-color: #0eff8f;
+    --secondary-color: #f58585;
+  }
 }
 
 html,
 body {
-    width: 100%;
-    min-height: 100vh;
-    margin: 0px;
-    padding: 0px;
-    font-family: "SF Pro Rounded Heavy", "SF Pro Rounded Heavy Placeholder", "-apple-system", "BlinkMacSystemFont", sans-serif;
+  width: 100%;
+  min-height: 100vh;
+  margin: 0px;
+  padding: 0px;
+  font-family:
+    'SF Pro Rounded Heavy', 'SF Pro Rounded Heavy Placeholder', '-apple-system',
+    'BlinkMacSystemFont', sans-serif;
 }
