@@ -12,13 +12,16 @@ export default {
 			colors: {
 				background: 'rgb(24, 24, 24)',
 				foreground: 'var(--foreground)',
-				"primary-button": "#0EFF8F",
-				"secondary-button": "#F58585",
+				"primary-color": "var(--primary-color)",
+				"secondary-color": "var(--secondary-color)",
 			},
 			borderRadius: {
 				lg: 'var(--radius)',
 				md: 'calc(var(--radius) - 2px)',
 				sm: 'calc(var(--radius) - 4px)'
+			},
+			boxShadow: {
+				custom: '0 0 10px 5px var(--secondary-color)',
 			}
 		}
 	},
