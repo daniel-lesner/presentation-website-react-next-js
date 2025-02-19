@@ -20,7 +20,7 @@ export default function ProjectsSection() {
   }, []);
 
   return (
-    <>
+    <div>
       <div className="flex flex-col items-center justify-center text-white p-8">
         <h1 id="projects" className="text-5xl font-bold mb-14">
           Projects
@@ -129,7 +129,7 @@ export default function ProjectsSection() {
           </div>
         </div>
 
-        <div className="mt-4 md:mt-0">
+        <div className="mt-4 ml-2 md:mt-0">
           <a
             className="bg-white text-purple-900 font-semibold px-6 py-3 rounded-lg hover:bg-gray-100 transition"
             href="https://pulmo-rehab.com"
@@ -140,6 +140,6 @@ export default function ProjectsSection() {
           </a>
         </div>
       </div>
-    </>
+    </div>
   );
 }
