@@ -1,6 +1,6 @@
 import { DevicePhoneMobileIcon, EnvelopeIcon } from '@heroicons/react/24/solid';
-import GithubIcon from './GithubIcon';
-import LinkedInIcon from './LinkedInIcon';
+import GithubIcon from '@/components/GithubIcon';
+import LinkedInIcon from '@/components/LinkedInIcon';
 
 export default function ContactSection() {
   return (
