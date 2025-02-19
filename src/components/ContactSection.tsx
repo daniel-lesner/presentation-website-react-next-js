@@ -4,7 +4,7 @@ import LinkedInIcon from '@/components/LinkedInIcon';
 
 export default function ContactSection() {
   return (
-    <div className="flex flex-col items-center justify-center text-white p-8">
+    <div className="flex flex-col items-center justify-center text-white pt-8">
       <h1 className="text-5xl font-bold mb-6">Daniel Lesner</h1>
       <h1 id="contact" className="text-4xl text-zinc-400 mb-14">
         Contact
