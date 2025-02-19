@@ -1,3 +1,4 @@
+import { GetStaticProps } from 'next';
 import ContactSection from '@/components/ContactSection';
 import EducationSection from '@/components/EducationSection';
 import Header from '@/components/Header';
@@ -17,3 +18,7 @@ export default function Home() {
     </div>
   );
 }
+
+export const getStaticProps: GetStaticProps = async () => {
+  return { props: {} };
+};
