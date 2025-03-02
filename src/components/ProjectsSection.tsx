@@ -20,7 +20,7 @@ export default function ProjectsSection() {
   }, []);
 
   return (
-    <div>
+    <>
       <div className="flex flex-col items-center justify-center text-white p-8">
         <h1 id="projects" className="text-5xl font-bold mb-14">
           Projects
@@ -140,6 +140,6 @@ export default function ProjectsSection() {
           </a>
         </div>
       </div>
-    </div>
+    </>
   );
 }
