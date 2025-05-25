@@ -5,8 +5,8 @@
 @layer base {
   :root {
     --radius: 0.5rem;
-    --primary-color: #0eff8f;
-    --secondary-color: #f58585;
+    --primary-color: #34d399;
+    --secondary-color: #1f2937;
   }
 }
 
