@@ -5,7 +5,7 @@ const experiences = [
   {
     title: 'Full-stack Web Developer',
     company: 'Sightcall',
-    duration: '04/2022 - Present (2 years)',
+    duration: '04/2022 - 06/2024 (2 years and 2 months)',
     location: 'Boulogne-Billancourt, France',
     description: [
       "Developed and tested new features to enhance the company's SaaS solutions.",
