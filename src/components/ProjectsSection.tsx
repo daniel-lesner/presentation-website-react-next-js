@@ -1,4 +1,5 @@
-import { useState, useEffect } from 'react';
+import { useState } from 'react';
+import { useSwipeable } from 'react-swipeable';
 import Image from 'next/image';
 import GithubIcon from '@/components/GithubIcon';
 
@@ -11,13 +12,12 @@ const images = [
 export default function ProjectsSection() {
   const [currentIndex, setCurrentIndex] = useState(0);
 
-  useEffect(() => {
-    const interval = setInterval(() => {
-      setCurrentIndex(prevIndex => (prevIndex + 1) % images.length);
-    }, 4000);
-
-    return () => clearInterval(interval);
-  }, []);
+  const carouselSwipeHandlers = useSwipeable({
+    onSwipedLeft: () => setCurrentIndex(i => (i + 1) % images.length),
+    onSwipedRight: () =>
+      setCurrentIndex(i => (i === 0 ? images.length - 1 : i - 1)),
+    trackMouse: true,
+  });
 
   return (
     <div className="flex flex-col items-center">
@@ -29,7 +29,7 @@ export default function ProjectsSection() {
         <h1 className="text-4xl text-zinc-400 mb-1 md:mb-14">Pulmo Rehab</h1>
 
         <div className="relative w-full max-w-3xl mx-auto">
-          <div className="overflow-hidden relative">
+          <div {...carouselSwipeHandlers} className="overflow-hidden relative">
             <div
               className="flex transition-transform duration-700 ease-in-out"
               style={{ transform: `translateX(-${currentIndex * 100}%)` }}
@@ -48,7 +48,7 @@ export default function ProjectsSection() {
           </div>
 
           <button
-            className="absolute left-2 top-1/2 transform -translate-y-1/2 bg-gray-800 text-white p-2 rounded-full"
+            className="absolute left-2 top-1/2 transform -translate-y-1/2 bg-gray-800 text-white px-3 py-1 md:px-4 md:py-2 rounded-full"
             onClick={() =>
               setCurrentIndex(prevIndex =>
                 prevIndex === 0 ? images.length - 1 : prevIndex - 1
@@ -58,7 +58,7 @@ export default function ProjectsSection() {
             ❮
           </button>
           <button
-            className="absolute right-2 top-1/2 transform -translate-y-1/2 bg-gray-800 text-white p-2 rounded-full"
+            className="absolute right-2 top-1/2 transform -translate-y-1/2 bg-gray-800 text-white px-3 py-1 md:px-4 md:py-2 rounded-full"
             onClick={() =>
               setCurrentIndex(prevIndex => (prevIndex + 1) % images.length)
             }
@@ -70,9 +70,10 @@ export default function ProjectsSection() {
             {images.map((_, index) => (
               <div
                 key={index}
-                className={`w-3 h-3 rounded-full ${
+                className={`w-3 h-3 rounded-full cursor-pointer ${
                   currentIndex === index ? 'bg-white' : 'bg-gray-400'
                 }`}
+                onClick={() => setCurrentIndex(index)}
               />
             ))}
           </div>
