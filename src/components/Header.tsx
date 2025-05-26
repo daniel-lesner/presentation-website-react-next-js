@@ -3,19 +3,13 @@ import Image from 'next/image';
 
 export default function Header() {
   return (
-    <header className="flex flex-wrap items-center justify-between p-2 md:px-5 lg:px-40 text-white">
-      <div className="flex items-center gap-4">
-        <Image
-          src="/logo.png"
-          alt="Logo"
-          width={48}
-          height={48}
-          className="rounded-lg"
-        />
+    <header className="flex flex-wrap items-center justify-between p-1 md:px-5 lg:px-40 text-white">
+      <Link href="/" className="flex items-center gap-2">
+        <Image src="/logo.png" alt="Logo" width={48} height={48} className="" />
         <span className="text-lg md:text-2xl font-bold truncate">
           Daniel Lesner
         </span>
-      </div>
+      </Link>
 
       <div className="flex items-center space-x-5 font-bold">
         <nav className="hidden lg:flex space-x-6 text-gray-300 text-lg">
