@@ -21,15 +21,15 @@ export default function ProjectsSection() {
 
   return (
     <div className="flex flex-col items-center">
-      <div className="flex flex-col items-center justify-center text-white p-8">
+      <div className="flex flex-col items-center justify-center text-white p-8 w-full">
         <h1 id="projects" className="text-5xl font-bold mb-14">
           Projects
         </h1>
 
-        <h1 className="text-4xl text-zinc-400 mb-14">Pulmo Rehab</h1>
+        <h1 className="text-4xl text-zinc-400 mb-1 md:mb-14">Pulmo Rehab</h1>
 
         <div className="relative w-full max-w-3xl mx-auto">
-          <div className="overflow-hidden relative w-full h-64">
+          <div className="overflow-hidden relative">
             <div
               className="flex transition-transform duration-700 ease-in-out"
               style={{ transform: `translateX(-${currentIndex * 100}%)` }}
@@ -41,7 +41,6 @@ export default function ProjectsSection() {
                     alt={`Slide ${index + 1}`}
                     width={800}
                     height={256}
-                    className="w-full h-64 object-contain"
                   />
                 </div>
               ))}
