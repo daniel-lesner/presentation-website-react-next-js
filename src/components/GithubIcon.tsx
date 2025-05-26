@@ -1,22 +1,24 @@
-import React from 'react';
-
 type SizeType = 'small' | 'responsive';
 
 interface GithubIconProps {
   size?: SizeType;
+  className?: string;
 }
 
-const GithubIcon: React.FC<GithubIconProps> = ({ size = 'responsive' }) => {
+const GithubIcon: React.FC<GithubIconProps> = ({
+  size = 'responsive',
+  className = '',
+}) => {
   const sizeClasses: Record<SizeType, string> = {
     small: 'h-6 w-6',
     responsive: 'h-10 w-10 md:h-12 md:w-12 lg:h-14 lg:w-14',
   };
 
   return (
-    <div className="text-primary-color">
+    <div>
       <svg
         xmlns="http://www.w3.org/2000/svg"
-        className={`${sizeClasses[size]}`}
+        className={`${sizeClasses[size]} ${className}`.trim()}
         fill="currentColor"
         viewBox="0 0 24 24"
       >

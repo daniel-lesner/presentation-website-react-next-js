@@ -1,13 +1,27 @@
-export default function LinkedInIcon() {
+type SizeType = 'small' | 'responsive';
+
+interface LinkedInIconProps {
+  size?: SizeType;
+  className?: string;
+}
+
+const sizeClasses: Record<SizeType, string> = {
+  small: 'h-6 w-6',
+  responsive: 'h-10 w-10 md:h-12 md:w-12 lg:h-14 lg:w-14',
+};
+
+export default function LinkedInIcon({
+  size = 'responsive',
+  className = '',
+}: LinkedInIconProps) {
   return (
-    <span className="h-10 w-10 md:h-12 md:w-12 lg:h-14 lg:w-14 text-primary-color">
-      <svg
-        xmlns="http://www.w3.org/2000/svg"
-        viewBox="0 0 448 512"
-        fill="currentColor"
-      >
-        <path d="M100.3 448H7.4V148.9h92.9zM53.8 108.1C24.1 108.1 0 83.5 0 53.8a53.8 53.8 0 0 1 107.6 0c0 29.7-24.1 54.3-53.8 54.3zM447.9 448h-92.7V302.4c0-34.7-.7-79.2-48.3-79.2-48.3 0-55.7 37.7-55.7 76.7V448h-92.8V148.9h89.1v40.8h1.3c12.4-23.5 42.7-48.3 87.9-48.3 94 0 111.3 61.9 111.3 142.3V448z" />
-      </svg>
-    </span>
+    <svg
+      xmlns="http://www.w3.org/2000/svg"
+      viewBox="0 0 448 512"
+      fill="currentColor"
+      className={`${sizeClasses[size]} ${className}`.trim()}
+    >
+      <path d="M100.3 448H7.4V148.9h92.9zM53.8 108.1C24.1 108.1 0 83.5 0 53.8a53.8 53.8 0 0 1 107.6 0c0 29.7-24.1 54.3-53.8 54.3zM447.9 448h-92.7V302.4c0-34.7-.7-79.2-48.3-79.2-48.3 0-55.7 37.7-55.7 76.7V448h-92.8V148.9h89.1v40.8h1.3c12.4-23.5 42.7-48.3 87.9-48.3 94 0 111.3 61.9 111.3 142.3V448z" />
+    </svg>
   );
 }

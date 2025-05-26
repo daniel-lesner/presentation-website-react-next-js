@@ -23,6 +23,21 @@ export default {
       boxShadow: {
         custom: '0 0 10px 5px var(--secondary-color)',
       },
+      keyframes: {
+        pulseColor: {
+          "0%, 100%": { color: "var(--primary-color)" },
+          "50%": { color: "var(--secondary-color)" },
+        },
+        hueRotate: {
+          "0%": { filter: "hue-rotate(0deg)" },
+          "100%": { filter: "hue-rotate(360deg)" },
+        },
+      },
+      animation: {
+        pulseColor: "pulseColor 5s infinite ease-in-out",
+        hueRotate: "hueRotate 20s infinite linear",
+        combined: "pulseColor 5s infinite ease-in-out, hueRotate 20s infinite linear",
+      },
     },
   },
   plugins: [require('tailwindcss-animate')],

@@ -10,15 +10,15 @@ export default function ContactSection() {
         Contact
       </h1>
 
-      <div className="space-y-4 text-xl md:text-2xl lg:text-3xl gap-4 flex flex-col gap-4 items-center">
+      <div className="space-y-4 text-xl md:text-2xl lg:text-3xl gap-4 flex flex-col gap-4 items-start">
         <div className="flex space-x-2 gap-6 items-center ">
-          <DevicePhoneMobileIcon className="size-10 md:size-12 lg:size-14 text-primary-color"></DevicePhoneMobileIcon>
+          <DevicePhoneMobileIcon className="size-10 md:size-12 lg:size-14 text-primary-color fill-current animate-combined"></DevicePhoneMobileIcon>
           <a className="hover:text-secondary-color" href="tel:0033676939082">
             0033676939082
           </a>
         </div>
         <div className="flex space-x-2 gap-6 items-center ">
-          <EnvelopeIcon className="size-10 md:size-12 lg:size-14 text-primary-color"></EnvelopeIcon>
+          <EnvelopeIcon className="size-10 md:size-12 lg:size-14 text-primary-color fill-current animate-combined"></EnvelopeIcon>
           <a
             className="hover:text-secondary-color"
             href="mailto:daniel.lesner@icloud.com"
@@ -27,7 +27,7 @@ export default function ContactSection() {
           </a>
         </div>
         <div className="flex space-x-2 gap-6 items-center ">
-          <LinkedInIcon />
+          <LinkedInIcon className="text-primary-color fill-current animate-combined" />
           <a
             className="hover:text-secondary-color"
             href="http://www.linkedin.com/in/daniel-lesner"
@@ -38,7 +38,7 @@ export default function ContactSection() {
           </a>
         </div>
         <div className="flex space-x-2 gap-6 items-center ">
-          <GithubIcon />
+          <GithubIcon className="text-primary-color fill-current animate-combined" />
           <a
             className="hover:text-secondary-color"
             href="http://www.github.com/daniel-lesner"
