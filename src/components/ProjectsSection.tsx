@@ -20,7 +20,7 @@ export default function ProjectsSection() {
   }, []);
 
   return (
-    <>
+    <div className="flex flex-col items-center">
       <div className="flex flex-col items-center justify-center text-white p-8">
         <h1 id="projects" className="text-5xl font-bold mb-14">
           Projects
@@ -29,7 +29,7 @@ export default function ProjectsSection() {
         <h1 className="text-4xl text-zinc-400 mb-14">Pulmo Rehab</h1>
 
         <div className="relative w-full max-w-3xl mx-auto">
-          <div className="overflow-hidden relative w-7/8 h-64">
+          <div className="overflow-hidden relative w-full h-64">
             <div
               className="flex transition-transform duration-700 ease-in-out"
               style={{ transform: `translateX(-${currentIndex * 100}%)` }}
@@ -80,7 +80,7 @@ export default function ProjectsSection() {
         </div>
       </div>
 
-      <div className="flex flex-col md:flex-row gap-8 justify-between items-center bg-secondary-color w-11/12 md:w-4/5 lg:w-1/2 px-4 md:px-16 py-8 justify-self-center text-white rounded-lg border border-purple-700 shadow-lg">
+      <div className="flex flex-col md:flex-row gap-8 bg-secondary-color w-11/12 md:w-4/5 lg:w-1/2 px-4 md:px-16 py-8 justify-self-center text-white rounded-lg border border-purple-700 shadow-lg">
         <div className="md:flex-1">
           <h3 className="text-3xl font-semibold mb-4">Pulmo Rehab</h3>
 
@@ -129,7 +129,7 @@ export default function ProjectsSection() {
           </div>
         </div>
 
-        <div className="mt-4 ml-2 md:mt-0">
+        <div className="mt-4 ml-2 md:mt-0 self-center">
           <a
             className="inline-block whitespace-nowrap bg-white text-secondary-color font-semibold px-6 py-3 rounded-lg hover:bg-gray-100 transition"
             href="https://pulmo-rehab.com"
@@ -140,6 +140,6 @@ export default function ProjectsSection() {
           </a>
         </div>
       </div>
-    </>
+    </div>
   );
 }
