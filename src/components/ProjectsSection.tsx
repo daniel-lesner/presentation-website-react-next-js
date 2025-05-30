@@ -107,7 +107,7 @@ export default function ProjectsSection() {
             <span className="location flex items-center text-sm">
               <GithubIcon size="small" />
               <a
-                className="hover:text-secondary-color ml-2"
+                className="hover:text-primary-color ml-2"
                 href="https://github.com/daniel-lesner/pulmo-rehab-fe"
                 target="_blank"
                 rel="noopener noreferrer"
@@ -118,7 +118,7 @@ export default function ProjectsSection() {
             <span className="flex items-center text-sm">
               <GithubIcon size="small" />
               <a
-                className="hover:text-secondary-color ml-2"
+                className="hover:text-primary-color ml-2"
                 href="https://github.com/daniel-lesner/pulmo-rehab-api"
                 target="_blank"
                 rel="noopener noreferrer"
