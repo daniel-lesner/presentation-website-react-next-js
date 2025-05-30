@@ -20,8 +20,8 @@ export default function ProjectsSection() {
   });
 
   return (
-    <div className="flex flex-col items-center">
-      <div className="flex flex-col items-center justify-center text-white p-8 w-full">
+    <div className="flex flex-col items-center text-white w-full">
+      <div className="flex flex-col items-center justify-center p-8 w-full">
         <h1 id="projects" className="text-5xl font-bold mb-14">
           Projects
         </h1>
@@ -48,7 +48,7 @@ export default function ProjectsSection() {
           </div>
 
           <button
-            className="absolute left-2 top-1/2 transform -translate-y-1/2 bg-gray-800 text-white px-3 py-1 md:px-4 md:py-2 rounded-full"
+            className="absolute left-2 top-1/2 transform -translate-y-1/2 bg-gray-800 px-3 py-1 md:px-4 md:py-2 rounded-full"
             onClick={() =>
               setCurrentIndex(prevIndex =>
                 prevIndex === 0 ? images.length - 1 : prevIndex - 1
@@ -58,7 +58,7 @@ export default function ProjectsSection() {
             ❮
           </button>
           <button
-            className="absolute right-2 top-1/2 transform -translate-y-1/2 bg-gray-800 text-white px-3 py-1 md:px-4 md:py-2 rounded-full"
+            className="absolute right-2 top-1/2 transform -translate-y-1/2 bg-gray-800 px-3 py-1 md:px-4 md:py-2 rounded-full"
             onClick={() =>
               setCurrentIndex(prevIndex => (prevIndex + 1) % images.length)
             }
